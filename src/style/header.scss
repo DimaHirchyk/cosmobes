@@ -1,98 +1,132 @@
-@use "../style/helper/breakpoints" as vars;
+@use "./helper/breakpoints" as vars;
+
+@media screen and (min-width: vars.$breakpoint-tablet) {
+}
+
+@media screen and (min-width: vars.$breakpoint-desktop) {
+}
 
 .header {
-  position: absolute;
-  top: 32px;
-  left: 0;
-  width: 100%;
-  background-color: transparent;
-
-  z-index: 100;
-  padding: 0 32px;
-
-  @media screen and (min-width: vars.$breakpoint-tablet) {
-    padding: 0 20px;
-  }
-
-  @media screen and (min-width: vars.$breakpoint-desktop) {
-    top: 40px;
-  }
+  background: linear-gradient(135deg, var(--bg-color), #2c2c2c 100%);
+  padding: 15px 0;
+  box-shadow: 0 2px 20px rgba(135, 206, 250, 0.1);
 }
 
 .header-container {
-  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--turquoise);
+  text-decoration: none;
+  transition: all 0.3s ease;
 
-  @media screen and (min-width: vars.$breakpoint-tablet) {
-    width: 60px;
-    height: 60px;
+  &:hover {
+    text-shadow: 0 0 15px rgba(135, 206, 250, 0.8);
+    transform: scale(1.05);
   }
 }
 
-.icons-for-modal {
+.bet {
+  color: var(--red);
+}
+
+.nav {
+  display: none;
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+.nav a {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background: var(--turquoise);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.nav a:hover {
+  color: var(--turquoise);
+}
+
+.auth-buttons {
+  display: none;
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    display: flex;
+    gap: 15px;
+  }
+}
+
+.btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 0.5333rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-login {
+  background: transparent;
+  background: var(--turquoise);
+  color: #000;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(135, 206, 250, 0.3);
+  }
+}
+
+.btn-register {
+  background: linear-gradient(135deg, var(--red) 0%, #ff4500 100%);
+  color: var(--white-color);
+  border: 2px solid transparent;
+}
+
+.btn-register:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(220, 20, 60, 0.4);
+  background: linear-gradient(135deg, #ff4500 0%, var(--red) 100%);
+}
+
+.burger-menu {
+  background-color: transparent;
+  border: none;
+
   @media screen and (min-width: vars.$breakpoint-desktop) {
     display: none;
   }
 }
-.burger-btn {
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  border: none;
-}
 
-.burger-close-btn {
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-  display: none;
-  align-items: center;
-  border: none;
-}
-
-.navigation {
-  display: none;
-
-  @media screen and (min-width: vars.$breakpoint-tablet) {
-  }
-
-  @media screen and (min-width: vars.$breakpoint-desktop) {
-    display: flex;
-  }
-}
-.header-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 80px;
-}
-
-.header-link {
-  position: relative;
-  color: var(--white-color);
-  font-weight: 500;
-  font-size: 24px;
-  white-space: nowrap;
-  &:after {
-    position: absolute;
-    content: "";
-    height: 2px;
-    width: 0;
-    background-color: var(--white-color);
-    bottom: -4px;
-    left: 0;
-    transition: width 0.3s ease;
-  }
-  &:hover::after {
-    width: 100%;
+.burger-icon {
+  stroke: var(--white-color);
+  transition: all 250ms;
+  &:hover {
+    stroke: var(--gray-text);
   }
 }

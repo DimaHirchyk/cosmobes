@@ -1,0 +1,109 @@
+@use "./helper/breakpoints" as vars;
+
+@media screen and (min-width: vars.$breakpoint-tablet) {
+}
+
+@media screen and (min-width: vars.$breakpoint-desktop) {
+}
+
+.footer {
+  background: linear-gradient(135deg, var(--bg-color), #2c2c2c 100%);
+  border-top: 2px solid var(--turquoise);
+  padding: 40px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    flex-direction: row;
+
+    align-items: start;
+    justify-content: space-between;
+  }
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    align-items: start;
+    gap: 15px;
+
+    &:nth-child(2) {
+      align-items: center;
+    }
+  }
+}
+
+.title-footer {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  color: var(--gray-text);
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: var(--turquoise);
+    padding-left: 10px;
+  }
+}
+
+.payment-systems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-icon {
+  cursor: pointer;
+  background: #2c2c2c;
+  padding: 15px;
+  border-radius: 10px;
+  color: var(--turquoise);
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 1px solid #444;
+
+  &.visa:hover {
+    background-image: url(../../public/picture/visa.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: transparent;
+  }
+  &.maestro:hover {
+    background-image: url(../../public/picture/Mastercard-logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: transparent;
+  }
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #333;
+  color: #888;
+}

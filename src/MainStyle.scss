@@ -4,14 +4,8 @@
 @use "/style/helper/variables";
 @use "/style/helper/breakpoints";
 
-@use "/style/header.scss";
-@use "/style/modal-burger.scss";
-@use "/style/hero.scss";
-@use "/style/hero-modal.scss";
-@use "/style/about-us.scss";
-@use "/style/advantages.scss";
-@use "/style/upcoming-tours.scss";
-@use "/style/reviews.scss";
-@use "/style/gallery.scss";
-@use "/style/questions-form.scss";
-@use "/style/contacts.scss";
+@use "/style/mobile_menu";
+@use "/style/header";
+@use "/style/hero";
+@use "/style/footer";
+@use "/style/star";

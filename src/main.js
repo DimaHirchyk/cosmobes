@@ -1,1 +1,2 @@
-import "./js/modal-burger";
+import "./js/star";
+import "./js/modal";

@@ -1,16 +1,18 @@
 @use "./breakpoints" as vars;
 
 :root {
-  --blue-color: #5b86a1;
-  --core-color: rgba(27, 29, 27, 1);
-  --bg-color: rgba(32, 35, 33, 1);
   --white-color: rgba(247, 251, 251, 1);
-  --grey-color: rgba(163, 165, 163, 1);
+  --gray-text: #cccccc;
+  --background: #0a0a0a;
+  --turquoise: #87ceeb;
+  --red: #cf0e48;
+  --bg-color: #1a1a1a;
   --font-family-base: "Montserrat", sans-serif;
+  --font-family-second: "LoremIpsum", sans-serif;
 }
 
 .container {
-  max-width: 375px;
+  max-width: 400px;
   padding: 0 32px;
   margin: 0 auto;
 
@@ -20,7 +22,7 @@
   }
 
   @media screen and (min-width: vars.$breakpoint-desktop) {
-    max-width: 1440px;
+    max-width: 1200px;
     padding: 0 135px;
   }
 }
