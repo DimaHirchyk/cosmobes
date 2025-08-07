@@ -86,14 +86,14 @@
   border: 1px solid #444;
 
   &.visa:hover {
-    background-image: url(../../public/picture/visa.png);
+    background-image: url(../public/img/visa.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     color: transparent;
   }
   &.maestro:hover {
-    background-image: url(../../public/picture/Mastercard-logo.png);
+    background-image: url(../public/img/Mastercard-logo.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
