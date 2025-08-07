@@ -1,0 +1,98 @@
+@use "../style/helper/breakpoints" as vars;
+
+.header {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+
+  z-index: 100;
+  padding: 0 32px;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    padding: 0 20px;
+  }
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    top: 40px;
+  }
+}
+
+.header-container {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.icons-for-modal {
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    display: none;
+  }
+}
+.burger-btn {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  border: none;
+}
+
+.burger-close-btn {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  display: none;
+  align-items: center;
+  border: none;
+}
+
+.navigation {
+  display: none;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+  }
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    display: flex;
+  }
+}
+.header-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.header-link {
+  position: relative;
+  color: var(--white-color);
+  font-weight: 500;
+  font-size: 24px;
+  white-space: nowrap;
+  &:after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: var(--white-color);
+    bottom: -4px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}

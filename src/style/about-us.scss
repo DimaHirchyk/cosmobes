@@ -1,0 +1,45 @@
+@use "../style/helper/breakpoints" as vars;
+
+.about-us {
+  display: block;
+  margin-inline: auto;
+  margin-top: 52px;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    margin-top: 80px;
+  }
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    width: 100vw;
+  }
+}
+.title-about {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  text-align: center;
+  margin-bottom: 28px;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    font-size: 52px;
+
+    margin-top: 40px;
+
+    @media screen and (min-width: vars.$breakpoint-desktop) {
+      font-size: 68px;
+    }
+  }
+}
+.text-about {
+  line-height: 100%;
+  font-size: 15px;
+  margin-bottom: 6px;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    font-size: 24px;
+  }
+}

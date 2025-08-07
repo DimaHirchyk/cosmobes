@@ -1,0 +1,50 @@
+body {
+  overflow-x: hidden;
+  font-family: var(--font-family-base);
+  color: var(--core-color);
+}
+
+p {
+  margin: 0;
+  line-height: 100%;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  outline: none;
+}
+
+button {
+  display: block;
+
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}

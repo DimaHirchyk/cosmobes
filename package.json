@@ -1,0 +1,27 @@
+{
+  "name": "carpathians",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "glob": "^11.0.0",
+    "postcss": "^8.4.41",
+    "postcss-sort-media-queries": "^5.2.0",
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "glob": "^11.0.2",
+    "micromodal": "^0.6.1",
+    "modern-normalize": "^3.0.1",
+    "normalize-scss": "^8.0.0",
+    "sass": "^1.87.0",
+    "vite-plugin-full-reload": "^1.2.0",
+    "vite-plugin-html-inject": "^1.1.2"
+  }
+}
