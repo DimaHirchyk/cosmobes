@@ -82,11 +82,11 @@
   padding: 12px 25px;
   border: none;
   border-radius: 0.5333rem;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 18px;
   transition: all 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
+  display: flex;
+  align-items: center;
   position: relative;
   overflow: hidden;
 }
@@ -103,7 +103,7 @@
 }
 
 .btn-register {
-  background: linear-gradient(135deg, var(--red) 0%, #ff4500 100%);
+  background: linear-gradient(135deg, var(--red) 0%, #fb0a02 100%);
   color: var(--white-color);
   border: 2px solid transparent;
 }
@@ -111,7 +111,7 @@
 .btn-register:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 20px rgba(220, 20, 60, 0.4);
-  background: linear-gradient(135deg, #ff4500 0%, var(--red) 100%);
+  background: linear-gradient(135deg, #fb0a02 0%, var(--red) 100%);
 }
 
 .burger-menu {
