@@ -12,12 +12,11 @@
 }
 
 .container {
-  max-width: 400px;
   padding: 0 32px;
   margin: 0 auto;
 
   @media screen and (min-width: vars.$breakpoint-tablet) {
-    max-width: 768px;
+    max-width: 1000px;
     padding: 0 20px;
   }
 
